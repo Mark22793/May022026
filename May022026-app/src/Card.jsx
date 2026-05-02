@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.css'
 
-function Card({ header, title, description, buttontext }) {
+function Card({ header, title, description, buttontext, hastitle }) {
  
 return (
     <>
@@ -9,7 +9,10 @@ return (
     {header}
   </div>
   <div className="card-body">
-    <h5 className="card-title">{title}</h5>
+    { hastitle===true &&
+      <h5 className="card-title">{title}</h5>
+    }
+    
     <p className="card-text">{description}</p>
     <a href="#" className="btn btn-primary">{buttontext}</a>
   </div>
