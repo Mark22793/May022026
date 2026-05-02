@@ -1,20 +1,20 @@
-
 import 'bootstrap/dist/css/bootstrap.css'
 
-function Card(){
+function Card({ header, title, description, buttontext }) {
+ 
 return (
     <>
     <div className="card">
   <div className="card-header">
-    Featured
+    {header}
   </div>
   <div className="card-body">
-    <h5 className="card-title">Special title treatment</h5>
-    <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" className="btn btn-primary">Go somewhere</a>
+    <h5 className="card-title">{title}</h5>
+    <p className="card-text">{description}</p>
+    <a href="#" className="btn btn-primary">{buttontext}</a>
   </div>
 </div>
-    <h2> Card</h2>
+   
     </>
 );
 }
